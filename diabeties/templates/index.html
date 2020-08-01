@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <style>
+        body{
+            /* background-image: url("C:/Users/saura/Downloads/diabetes.jpg"); */
+            /* background-color: #8ec216c5; */
+            background: url('https://data.1freewallpapers.com/detail/building-corner-sky-architecture-minimalism.jpg') no-repeat center;
+            /* background-image: url('C://Users//saura//Downloads//sunrises-and-sunsets-trees-sun-fog-4k.jpg') no-repeat center; */
+
+        }
+        form input {
+            height:35px;
+            width: 250px;
+            /* text-align: center; */
+
+        }
+        #saurabh{
+            text-align: center;
+            /* margin-top: 2px; */
+        }
+        input{
+            margin-top: 33px;
+            
+        }
+
+        h1{
+            color: rgb(160, 12, 32);
+            margin-left: 38%;
+            margin-top: 60px;
+        }
+
+        
+
+    </style>
+    <body>
+        <h1>PREDICT YOUR DIABETES</h1>
+        <div id="saurabh">
+            
+
+        
+        <form action="{{ url_for('login')}}" method="POST">
+
+            <input type="text"  name="Pregnancies" placeholder="Pregnancies" required="required form" class="1"><br>
+            <input type="text"  name="Glucose" placeholder="Glucose" required="required form"><br>
+            <input type="text"  name="BloodPressure" placeholder="BloodPressure" required="required form"><br>
+            <input type="text"  name="SkinThickness" placeholder="SkinThickness" required="required form"><br>
+            <input type="text"  name="Insulin" placeholder="Insulin" required="required form"><br>
+            <input type="text"  name="BMI" placeholder="BMI(Float Values)" required="required form"><br>
+            <input type="text"  name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction(Float Values)" required="required form"><br>
+            <input type="text"  name="Age" placeholder="Age" required="required form"><br>
+            <input type="submit"  name="submit">
+        </form>
+        
+
+    </div>
+    <h1>{{prediction_text}}</h1>
+
+
+    </body>
+</html>
